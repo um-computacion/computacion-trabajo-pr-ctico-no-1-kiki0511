@@ -1,4 +1,5 @@
 def decimal_to_roman(num):
+    #Lista de valoers decimales y sus equivalentes romanos
     val = [
         1000, 900, 500, 400,
         100, 90, 50, 40,
@@ -11,8 +12,10 @@ def decimal_to_roman(num):
         "X", "IX", "V", "IV",
         "I"
     ]
+    #cadena vacia para ir armando el romano
     roman = ''
     i = 0
+    #mientras el numero sea num > 0 , el numero no ha sido convertido completamente 
     while num > 0:
         for _ in range(num // val[i]):
             roman += syms[i]
@@ -20,7 +23,7 @@ def decimal_to_roman(num):
         i += 1
     return roman
 
-# Solo se ejecuta si corres el archivo directamente
+
 if __name__ == '__main__':
     entrada = input("Ingresá un número del 1 al 3999: ")
 
